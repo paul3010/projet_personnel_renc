@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MessagesController!
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Messagerie</h2>
+				<P>Recu :{{app.user.received | length}}</P>
+				<P>Envoyé:{{app.user.sent | length}}</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

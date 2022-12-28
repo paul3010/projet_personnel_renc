@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello AfficheuserController!
+{% endblock %}
+
+{% block body %}
+	{% for info in informations %}
+		<p>Pays:{{ info.country }}</p>
+		<p>Ville:{{ info.city }}</p>
+		<p>Enfant:{{ info.children }}</p>
+		<p>Taille:{{ info.size}}</p>
+		<p>religion:{{ info.religion}}</p>
+		<hr/>
+	{% endfor %}
+{% endblock %}

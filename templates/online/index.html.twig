@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello OnlineController!
+{% endblock %}
+{% block body %}
+	{% for info in informations %}
+		<a href="{{path('affiche_user', {id: info.id})}}">{{ info.pseudo }}</a>
+		<hr/>
+	{% endfor %}
+{% endblock %}

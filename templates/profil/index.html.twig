@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}Profil
+{% endblock %}
+{% block body %}
+	<div class="container">
+		{% for info in Informations %}
+			<p>Pays:{{ info.country }}</p>
+			<p>Ville:{{ info.city }}</p>
+			<p>Enfant:{{ info.children }}</p>
+			<p>Taille:{{ info.size}}</p>
+			<p>religion:{{ info.religion}}</p>
+			<hr/>
+		{% endfor %}
+	</div>
+{% endblock %}

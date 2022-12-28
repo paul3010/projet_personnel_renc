@@ -1,0 +1,28 @@
+<header>
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" style="padding-right:200px;">Projet personnel</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav" style="margin:5px;">
+
+
+					{% if app.user %}
+						<a class="nav-link" href="{{path('app_messages')}}">messages</a>
+						<a class="nav-link" href="{{path('app_recherche')}}">recherche</a>
+						<a class="nav-link" href="{{path('app_online')}}">En ligne</a>
+						<a class="nav-link" href="{{path('app_liker')}}">Liker</a>
+						<a class="nav-link" href="{{path('app_mutuel')}}">c'est mutuel</a>
+						<a class="nav-link" href="{{path('app_profil')}}">profil</a>
+						<a class="nav-link" href="{{path('app_logout')}}">Deconnexion</a>
+					{% else %}
+						<a class="nav-link active" aria-current="page" href="{{path('app_main')}}">Home</a>
+						<a class="nav-link" href="{{path('app_login')}}">connexion</a>
+						<a class="nav-link" href="{{path('app_register')}}">inscription</a>
+					{% endif %}
+				</div>
+			</div>
+		</nav>
+	</header>
